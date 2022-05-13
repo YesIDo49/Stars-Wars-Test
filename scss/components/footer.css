@@ -1,0 +1,96 @@
+.footer {
+  height: 26rem;
+  padding: 2rem;
+  color: #9B9B9B;
+  background-image: url("../../assets/darthvader.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.footer__rights {
+  text-align: center;
+}
+.footer__rights h3 {
+  margin: 0;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5rem 0;
+}
+.footer__content__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.footer__content__links a {
+  text-decoration: none;
+  color: #9B9B9B;
+  padding-top: 2rem;
+  position: relative;
+  display: inline-block;
+}
+.footer__content__links a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.15rem;
+  bottom: -2px;
+  left: 0;
+  background-color: #9B9B9B;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.footer__content__links a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.footer__content__links img {
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.footer__content__links__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer__content__links__socials a:after {
+  content: none;
+}
+
+@media screen and (max-width: 880px) {
+  .footer {
+    height: 35rem;
+  }
+  .footer__content {
+    flex-wrap: wrap;
+    margin: 2rem 0;
+  }
+  .footer__content__links {
+    flex: none;
+    width: 50%;
+  }
+  .footer__content__links__socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer__content__links__socials a {
+    padding-top: 0;
+  }
+  .footer__content .footer__content__links.--row {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

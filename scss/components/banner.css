@@ -1,0 +1,54 @@
+.banner-header {
+  height: 100vh;
+}
+.banner-header__bg {
+  background-image: url("../../assets/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.banner {
+  height: 35rem;
+}
+.banner__bg {
+  background-image: url("../../assets/kiloren.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.banner-footer {
+  height: 23rem;
+}
+.banner-footer__bg {
+  background-image: url("../../assets/stormtroopers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+@media screen and (max-width: 880px) {
+  .banner-header {
+    background-image: url("../../assets/header-bg.png");
+    background-size: cover;
+  }
+  .banner-header__bg {
+    background-image: url("../../assets/logo.png");
+    background-size: contain;
+    background-position: center;
+    background-attachment: inherit;
+  }
+
+  .banner__bg {
+    background-size: auto;
+    background-attachment: inherit;
+  }
+}
+
+/*# sourceMappingURL=banner.css.map */

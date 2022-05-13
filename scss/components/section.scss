@@ -1,0 +1,113 @@
+.force-awk{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  margin: 5rem 10%;
+
+  &__content{
+    margin: 0 5rem;
+    width: 30%;
+
+    &__title{
+
+      h3{
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+.far-away{
+  margin: 5rem 10%;
+
+  &__title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  &__content{
+
+
+    &__paraph{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      margin: auto;
+
+
+      p{
+        margin: 0;
+      }
+
+
+      p:nth-child(1){
+
+        &:before{
+          display: block;
+          width: 15rem;
+          height: 15rem;
+          content: "";
+          background-image: url("../../assets/r2d2_c3p0.jpg");
+          float: left;
+          margin: 0 1rem 1rem 0;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 880px) {
+
+
+  .force-awk{
+    margin: 5rem 0;
+
+    &__img{
+      display: none;
+    }
+
+    &__content{
+      margin: 0 3rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  .far-away{
+    margin: 5rem 3rem;
+
+    &__content{
+
+      &__paraph{
+        text-align: center;
+        width: 100%;
+
+        p:nth-child(1){
+          &:before{
+
+            float: none;
+            margin: 2rem auto;
+
+          }
+        }
+
+
+      }
+    }
+  }
+
+}

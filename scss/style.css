@@ -1,0 +1,330 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+@media screen and (max-width: 1600px) {
+  html, body {
+    font-size: 16px;
+  }
+}
+
+.bold-italic {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.banner-header {
+  height: 100vh;
+}
+.banner-header__bg {
+  background-image: url("../../assets/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.banner {
+  height: 35rem;
+}
+.banner__bg {
+  background-image: url("../../assets/kiloren.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.banner-footer {
+  height: 23rem;
+}
+.banner-footer__bg {
+  background-image: url("../../assets/stormtroopers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+@media screen and (max-width: 880px) {
+  .banner-header {
+    background-image: url("../../assets/header-bg.png");
+    background-size: cover;
+  }
+  .banner-header__bg {
+    background-image: url("../../assets/logo.png");
+    background-size: contain;
+    background-position: center;
+    background-attachment: inherit;
+  }
+
+  .banner__bg {
+    background-size: auto;
+    background-attachment: inherit;
+  }
+}
+.footer {
+  height: 26rem;
+  padding: 2rem;
+  color: #9B9B9B;
+  background-image: url("../../assets/darthvader.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.footer__rights {
+  text-align: center;
+}
+.footer__rights h3 {
+  margin: 0;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5rem 0;
+}
+.footer__content__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.footer__content__links a {
+  text-decoration: none;
+  color: #9B9B9B;
+  padding-top: 2rem;
+  position: relative;
+  display: inline-block;
+}
+.footer__content__links a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.15rem;
+  bottom: -2px;
+  left: 0;
+  background-color: #9B9B9B;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.footer__content__links a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.footer__content__links img {
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.footer__content__links__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer__content__links__socials a:after {
+  content: none;
+}
+
+@media screen and (max-width: 880px) {
+  .footer {
+    height: 35rem;
+  }
+  .footer__content {
+    flex-wrap: wrap;
+    margin: 2rem 0;
+  }
+  .footer__content__links {
+    flex: none;
+    width: 50%;
+  }
+  .footer__content__links__socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer__content__links__socials a {
+    padding-top: 0;
+  }
+  .footer__content .footer__content__links.--row {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+  }
+}
+.menu {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 100;
+  left: 0;
+}
+.navbar__close-btn {
+  display: none;
+}
+.navbar__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+}
+.navbar__list__item {
+  text-align: center;
+  font-size: 1.4rem;
+  transition: all 0.2s ease-in-out;
+}
+.navbar__list__item a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.navbar__list__item a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.15rem;
+  bottom: -2px;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.navbar__list__item a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-width: 880px) {
+  .menu {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+
+  .navbar {
+    height: 100vh;
+    justify-content: start;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+    left: -500px;
+  }
+  .navbar__close-btn {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+  }
+  .navbar__list {
+    flex-direction: column;
+    margin-top: 6rem;
+    padding: 0;
+  }
+  .navbar__list__item {
+    padding: 1rem 0;
+  }
+}
+.force-awk {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  margin: 5rem 10%;
+}
+.force-awk__content {
+  margin: 0 5rem;
+  width: 30%;
+}
+.force-awk__content__title h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.far-away {
+  margin: 5rem 10%;
+}
+.far-away__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.far-away__content__paraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+.far-away__content__paraph p {
+  margin: 0;
+}
+.far-away__content__paraph p:nth-child(1):before {
+  display: block;
+  width: 15rem;
+  height: 15rem;
+  content: "";
+  background-image: url("../../assets/r2d2_c3p0.jpg");
+  float: left;
+  margin: 0 1rem 1rem 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 880px) {
+  .force-awk {
+    margin: 5rem 0;
+  }
+  .force-awk__img {
+    display: none;
+  }
+  .force-awk__content {
+    margin: 0 3rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .far-away {
+    margin: 5rem 3rem;
+  }
+  .far-away__content__paraph {
+    text-align: center;
+    width: 100%;
+  }
+  .far-away__content__paraph p:nth-child(1):before {
+    float: none;
+    margin: 2rem auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
